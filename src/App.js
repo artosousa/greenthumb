@@ -83,19 +83,20 @@ class App extends Component {
     return (
       <div className="plants-list">
         <SiteNav/>
-        
-          <div className="row">
-            {this.state.loading ? <Loading /> : this.state.plants.map(plant => {
-              return (
-                <div className="container">
-                  <Plant
-                    key={plant.id}
-                    plant={plant}
-                    selectPlant={this.selectPlant}
-                  />
-                </div>
-              );
-            })}
+          <div className="container">
+            <div className="row">
+              {this.state.loading ? <Loading /> : this.state.plants.map(plant => {
+                return (
+                  
+                    <Plant
+                      key={plant.id}
+                      plant={plant}
+                      selectPlant={this.selectPlant}
+                    />
+                
+                );
+              })}
+            </div>
           </div>
       </div>
     );
