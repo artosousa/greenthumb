@@ -1,0 +1,32 @@
+.card{
+    cursor: pointer;
+    top: 0;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+}
+.plants-list .card:hover{
+    opacity: 0.9;
+    box-shadow: 0 0 10px #666;
+    top: -5px;
+}
+.card-title{
+    text-shadow: 1px 1px 1px #000;
+    line-height: 25px;
+}
+.card.small .card-image, 
+.card.medium .card-image, 
+.card.large .card-image{
+    background: #008e28; /* Old browsers */
+    background: -moz-linear-gradient(top, #008e28 0%, #006e2e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #008e28 0%,#006e2e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #008e28 0%,#006e2e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#008e28', endColorstr='#006e2e',GradientType=0 ); /* IE6-9 */
+    min-height: 100%;
+}
+.card.small .card-image img, 
+.card.medium .card-image img, 
+.card.large .card-image img{
+    width: 150%;
+    height: 400px;
+    object-fit: cover
+}
