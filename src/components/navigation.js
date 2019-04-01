@@ -8,7 +8,7 @@ export default function SiteNav(){
             <div className="navbar-fixed">
                 <nav>
                     <div className="nav-wrapper">
-                        <a href="#!" className="brand-logo center">&#128077; Green Thumb</a>
+                        <a href="#!" className="brand-logo center">Green &#128077; </a>
                         
                     </div>
                 </nav>

@@ -14,7 +14,6 @@ class Plant extends React.Component {
     //const [image] = this.props.plant.images;
     //console.log(this.props.plant.images);
 
-    console.log(this.props.plant.growth);
     return (
       
         <div className="col s12 m4 l3">

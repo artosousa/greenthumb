@@ -58,21 +58,34 @@ class App extends Component {
 
   render() {
     if(this.state.selectedPlant){
+      console.log(this.state.selectedPlant);
       return (
-        <div>
+        <div className="single-plant">
           <SiteNav/>
           <div className="container">
-            <div class="card horizontal">
-              <div class="card-image">
+            <div className="row">
+              <div className="col s6 single-plant-image">
                 <PlantImage plant={this.state.selectedPlant} />
               </div>
-              <div class="card-stacked">
-                <div class="card-content">
-                  <h5>{this.state.selectedPlant.common_name}</h5>
-                </div>
-                <div class="card-action">
-                  <button  className="btn" onClick={this.deselectPlant}>Go Back</button>
-                </div>
+              <div className="col s6 ">
+                <h5>{this.state.selectedPlant.common_name}</h5>
+                <table className="striped">
+                  <tbody>
+                    <tr>
+                      <td>Family: </td>
+                      <td>{this.state.selectedPlant.family_common_name}</td>
+                    </tr>
+                    <tr>
+                      <td>Duration:</td>
+                      <td>{this.state.selectedPlant.main_species.duration}</td>
+                    </tr>
+                    <tr>
+                      <td>Temperature Minimum:</td>
+                      <td>{this.state.selectedPlant.main_species.growth.temperature_minimum.deg_c}&#176;C</td>
+                    </tr>
+                  </tbody>
+                </table>
+                <button  className="btn" onClick={this.deselectPlant}>Go Back</button>
               </div>
             </div>
           </div>

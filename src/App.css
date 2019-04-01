@@ -1,0 +1,15 @@
+body{
+    background: url('./images/bg.jpg') center top;
+    background-attachment: fixed;
+}
+.single-plant table{
+    font-family: Inconsolata, monospace;
+}
+.single-plant-image{
+    overflow: hidden;
+}
+.single-plant-image img{
+    width: 150%;
+    height: 400px;
+    object-fit: cover
+}
