@@ -21,12 +21,12 @@ class App extends Component {
 
   componentDidMount() {
     const proxyUrl = "https://cors-anywhere.herokuapp.com/";
-    const url = "https://trefle.io/api/species?token=MHlEQlVnNnhnaEhyQk9uUXJaUmNGQT09";
+    const url = "https://trefle.io/api/plants?token=MHlEQlVnNnhnaEhyQk9uUXJaUmNGQT09";
     fetch(proxyUrl + url)
     .then(response => response.json())
     .then(data => {
         const promises = data.map( plant => {
-          const url = `https://trefle.io/api/species/${plant.id}?token=MHlEQlVnNnhnaEhyQk9uUXJaUmNGQT09`;
+          const url = `https://trefle.io/api/plants/${plant.id}?token=MHlEQlVnNnhnaEhyQk9uUXJaUmNGQT09`;
           return fetch(proxyUrl + url)
           .then(response => response.json())
           
